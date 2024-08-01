@@ -1,0 +1,203 @@
+/* CSS untuk memperhalus tampilan */
+body {
+    background: linear-gradient(to bottom, #87CEEB, #4682B4);
+    font-family: Arial, sans-serif;
+    color: white;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #444;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    transition: left 0.3s;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+    z-index: 1000;
+    padding-top: 60px; /* Tambahkan padding-top untuk memberikan jarak dari tombol sidebar */
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 0;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 10px; /* Tambahkan margin-top untuk memberikan jarak antar link */
+}
+
+.sidebar a:hover {
+    background-color: #575757;
+    transform: translateX(10px);
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    margin-left: 0;
+    transition: margin-left 0.3s;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.upload-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.upload-button:hover {
+    transform: scale(1.1);
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery-item {
+    background-color: #fff;
+    color: black;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    text-align: center;
+    max-width: 200px;
+}
+
+.gallery-item img, .gallery-item video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.description {
+    margin-top: 10px;
+    display: none;
+}
+
+.download-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #4682B4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.download-button:hover {
+    background-color: #357ABD;
+}
+
+.toggle-sidebar {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #4682B4;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1001;
+    transition: transform 0.3s;
+}
+
+.toggle-sidebar:hover {
+    transform: rotate(90deg);
+}
+
+#descriptionContainer {
+    display: none;
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#title, #description {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: calc(100% - 22px);
+    margin-bottom: 10px;
+}
+
+#finishAddingButton {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+#finishAddingButton:hover {
+    transform: scale(1.1);
+}
+
+.popup-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.popup {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.popup button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.popup .confirm {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.popup .cancel {
+    background-color: #f44336;
+    color: white;
+}

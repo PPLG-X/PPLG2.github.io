@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery Albasyariah</title>
+    <link rel="stylesheet" href="sampingan\Gallery.css">
+    <link rel="icon" href="bahan\icon.jpg" type="image/png">
+</head>
+<body>
+
+<button class="toggle-sidebar" onclick="toggleSidebar()">☰</button>
+
+<div class="sidebar" id="sidebar">
+    <a href="index.html">Home</a>
+    <a href="">IG Kelas Albasyariah</a>
+</div>
+
+<div class="main-content" id="main-content">
+    <header>
+        <h1>Gallery Albasyariah</h1>
+        <button class="upload-button" onclick="triggerFileInput()">Input Gambar/Video Disini</button>
+        <input type="file" id="mediaInput" accept="image/*,video/*" multiple style="display:none;">
+    </header>
+    <div id="descriptionContainer">
+        <label for="title">Judul:</label>
+        <input type="text" id="title" placeholder="Masukkan judul...">
+        <label for="description">Deskripsi:</label>
+        <input type="text" id="description" placeholder="Masukkan deskripsi...">
+        <button id="finishAddingButton">Selesai Menambahkan</button>
+    </div>
+    <div class="gallery-container" id="galleryContainer"></div>
+</div>
+
+<div class="popup-container" id="popupContainer">
+    <div class="popup">
+        <p>Apakah Anda yakin ingin menambahkan media ini?</p>
+        <button class="confirm" id="confirmButton">Ya</button>
+        <button class="cancel" id="cancelButton">Tidak</button>
+    </div>
+</div>
+
+<script src="sampingan\Gallery.js"></script>
+
+</body>
+</html>
